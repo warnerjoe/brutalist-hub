@@ -16,99 +16,131 @@ import {
 const portfolios = [
   {
     id: 'brutalist',
-    title: 'Original Brutalist',
-    description: 'Raw, bold design with strong typography and geometric shapes',
+    title: 'Original Yellow',
+    description: 'Classic brutalist design with yellow background and black text',
     icon: <Zap className="w-6 h-6" />,
-    color: 'from-red-600 to-orange-600',
+    color: 'from-yellow-400 to-yellow-500',
     href: '/portfolios/brutalist'
   },
   {
     id: 'minimalist',
-    title: 'Geometric Grid',
-    description: 'Brutalist grid system with modular geometric components',
-    icon: <Grid3x3 className="w-6 h-6" />,
-    color: 'from-blue-600 to-cyan-600',
+    title: 'Classic Red/Black',
+    description: 'Red background with bold black text and yellow accents',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-red-500 to-red-600',
     href: '/portfolios/minimalist'
   },
   {
     id: 'creative-agency',
-    title: 'Split Screen',
-    description: 'Divided layouts with contrasting brutalist sections',
-    icon: <Layers className="w-6 h-6" />,
-    color: 'from-green-600 to-lime-600',
+    title: 'Neon Cyber',
+    description: 'Black background with cyan and pink neon highlights',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-black to-gray-900',
     href: '/portfolios/creative-agency'
   },
   {
     id: 'data-dashboard',
-    title: 'Stacked Blocks',
-    description: 'Heavy block elements stacked in brutalist composition',
-    icon: <Code2 className="w-6 h-6" />,
-    color: 'from-purple-600 to-pink-600',
+    title: 'Industrial Orange',
+    description: 'Orange industrial theme with dark navigation and clean contrasts',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-orange-400 to-orange-500',
     href: '/portfolios/data-dashboard'
   },
   {
     id: 'terminal',
-    title: 'Angular Cuts',
-    description: 'Sharp angles and diagonal cuts in brutalist style',
+    title: 'Electric Blue',
+    description: 'Bright blue background with white navigation and yellow accents',
     icon: <Zap className="w-6 h-6" />,
-    color: 'from-orange-600 to-red-600',
+    color: 'from-blue-500 to-blue-600',
     href: '/portfolios/terminal'
   },
   {
     id: 'interactive-3d',
-    title: 'Overlapping Layers',
-    description: 'Layered elements with brutalist depth and shadows',
-    icon: <Layers className="w-6 h-6" />,
-    color: 'from-cyan-600 to-blue-600',
+    title: 'Forest Brutalist',
+    description: 'Deep green background with red and yellow geometric shapes',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-green-600 to-green-700',
     href: '/portfolios/interactive-3d'
   },
   {
     id: 'timeline',
-    title: 'Text-Heavy Typography',
-    description: 'Typography-focused brutalist design with bold fonts',
-    icon: <BookOpen className="w-6 h-6" />,
-    color: 'from-yellow-600 to-orange-600',
+    title: 'Purple Rage',
+    description: 'Purple background with yellow navigation and pink accents',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-purple-600 to-purple-700',
     href: '/portfolios/timeline'
   },
   {
     id: 'card-based',
-    title: 'Diagonal Layout',
-    description: 'Diagonal compositions with brutalist geometric forms',
+    title: 'Sunset Brutal',
+    description: 'Deep red sunset theme with yellow and purple shapes',
     icon: <Zap className="w-6 h-6" />,
-    color: 'from-pink-600 to-purple-600',
+    color: 'from-red-600 to-red-700',
     href: '/portfolios/card-based'
   },
   {
     id: 'magazine',
-    title: 'Collage Style',
-    description: 'Mixed media brutalist collage with overlapping elements',
-    icon: <Palette className="w-6 h-6" />,
-    color: 'from-teal-600 to-green-600',
+    title: 'Monochrome',
+    description: 'Classic black and white with strategic red accent colors',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-black to-gray-800',
     href: '/portfolios/magazine'
   },
   {
     id: 'glassmorphism',
-    title: 'Poster Design',
-    description: 'Large format poster-style brutalist composition',
-    icon: <Sparkles className="w-6 h-6" />,
-    color: 'from-indigo-600 to-purple-600',
+    title: 'Miami Vice',
+    description: 'Pink background with cyan navigation and vibrant highlights',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-pink-500 to-pink-600',
     href: '/portfolios/glassmorphism'
   },
   {
     id: 'corporate',
-    title: 'Industrial Grid',
-    description: 'Industrial-inspired brutalist grid with harsh contrasts',
-    icon: <Grid3x3 className="w-6 h-6" />,
-    color: 'from-gray-600 to-slate-700',
+    title: 'Acid Green',
+    description: 'Lime green background with purple navigation and bold contrasts',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-lime-400 to-lime-500',
     href: '/portfolios/corporate'
   },
   {
     id: 'gradient-modern',
-    title: 'Experimental Layout',
-    description: 'Unconventional brutalist layout breaking design rules',
-    icon: <Terminal className="w-6 h-6" />,
-    color: 'from-violet-600 to-indigo-600',
+    title: 'Deep Sea',
+    description: 'Teal background with orange navigation and cyan accents',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-teal-600 to-teal-700',
     href: '/portfolios/gradient-modern'
+  },
+  {
+    id: 'fire-engine',
+    title: 'Fire Engine',
+    description: 'Dark red background with yellow navigation and orange shapes',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-red-700 to-red-800',
+    href: '/portfolios/fire-engine'
+  },
+  {
+    id: 'retro-wave',
+    title: 'Retro Wave',
+    description: 'Indigo background with pink navigation and cyan highlights',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-indigo-600 to-indigo-700',
+    href: '/portfolios/retro-wave'
+  },
+  {
+    id: 'earth-tone',
+    title: 'Earth Tone',
+    description: 'Amber background with green navigation and brown accents',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-amber-600 to-amber-700',
+    href: '/portfolios/earth-tone'
+  },
+  {
+    id: 'arctic',
+    title: 'Arctic',
+    description: 'Dark slate background with blue navigation and cyan highlights',
+    icon: <Zap className="w-6 h-6" />,
+    color: 'from-slate-800 to-slate-900',
+    href: '/portfolios/arctic'
   }
 ]
 
@@ -123,11 +155,12 @@ export default function Home() {
           className="text-center mb-12"
         >
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Brutalist Portfolio Variations
+            Brutalist Color Schemes
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Explore 12 different brutalist design approaches. Each variant showcases unique layouts, 
-            typography treatments, and geometric compositions while maintaining the raw, bold aesthetic.
+            Choose from 16 bold color variations of the same brutalist design. Each scheme maintains 
+            the exact same layout and animations but with unique color personalities - from professional 
+            to vibrant to experimental.
           </p>
         </motion.div>
 

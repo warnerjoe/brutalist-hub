@@ -6,9 +6,9 @@ import { portfolioData } from '@/lib/portfolio-data'
 
 export default function BrutalistPortfolio() {
   return (
-    <div className="min-h-screen bg-orange-400 text-black overflow-hidden">
+    <div className="min-h-screen bg-red-700 text-white overflow-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-gray-900 text-orange-400 z-50 border-b-4 border-black">
+      <nav className="fixed top-0 w-full bg-yellow-400 text-black z-50 border-b-4 border-black">
         <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
           <motion.h2
             initial={{ rotateZ: -5 }}
@@ -23,9 +23,9 @@ export default function BrutalistPortfolio() {
             animate={{ x: 0 }}
             className="flex gap-6 font-bold uppercase text-sm"
           >
-            <a href="#about" className="hover:bg-orange-400 hover:text-black px-2 py-1 transition-colors">About</a>
-            <a href="#work" className="hover:bg-orange-400 hover:text-black px-2 py-1 transition-colors">Work</a>
-            <a href="#contact" className="hover:bg-orange-400 hover:text-black px-2 py-1 transition-colors">Contact</a>
+            <a href="#about" className="hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">About</a>
+            <a href="#work" className="hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">Work</a>
+            <a href="#contact" className="hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">Contact</a>
           </motion.div>
         </div>
       </nav>
@@ -42,7 +42,7 @@ export default function BrutalistPortfolio() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-1/4 left-1/4 w-64 h-64 bg-black -rotate-12"
+            className="absolute top-1/4 left-1/4 w-64 h-64 bg-orange-500 -rotate-12"
           />
           <motion.div
             animate={{
@@ -53,7 +53,7 @@ export default function BrutalistPortfolio() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rotate-45"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-black rotate-45"
           />
         </div>
 
@@ -65,10 +65,10 @@ export default function BrutalistPortfolio() {
             className="mb-8"
           >
             <h1 className="text-7xl md:text-9xl font-black uppercase leading-none">
-              <span className="block bg-gray-900 text-orange-400 px-4 py-2 inline-block transform -rotate-2">
+              <span className="block bg-yellow-400 text-black px-4 py-2 inline-block transform -rotate-2">
                 {portfolioData.name.split(' ')[0]}
               </span>
-              <span className="block bg-black text-white px-4 py-2 inline-block transform rotate-2 mt-4">
+              <span className="block bg-orange-500 text-black px-4 py-2 inline-block transform rotate-2 mt-4">
                 {portfolioData.name.split(' ')[1]}
               </span>
             </h1>
@@ -77,7 +77,7 @@ export default function BrutalistPortfolio() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="bg-gray-900 text-orange-400 p-6 border-4 border-black transform -rotate-1"
+            className="bg-yellow-400 text-black p-6 border-4 border-black transform -rotate-1"
           >
             <p className="text-2xl font-black uppercase mb-2">{portfolioData.title}</p>
             <p className="text-lg">{portfolioData.bio}</p>
@@ -90,13 +90,13 @@ export default function BrutalistPortfolio() {
           >
             <a
               href="#work"
-              className="bg-black text-white px-8 py-4 font-black uppercase border-4 border-black hover:transform hover:translate-x-1 hover:translate-y-1 transition-transform flex items-center gap-2"
+              className="bg-orange-500 text-black px-8 py-4 font-black uppercase border-4 border-black hover:transform hover:translate-x-1 hover:translate-y-1 transition-transform flex items-center gap-2"
             >
               See Work <ArrowRight />
             </a>
             <a
               href="#contact"
-              className="bg-white text-black px-8 py-4 font-black uppercase border-4 border-black hover:transform hover:translate-x-1 hover:translate-y-1 transition-transform"
+              className="bg-black text-white px-8 py-4 font-black uppercase border-4 border-black hover:transform hover:translate-x-1 hover:translate-y-1 transition-transform"
             >
               Hire Me!
             </a>
@@ -105,7 +105,7 @@ export default function BrutalistPortfolio() {
       </section>
 
       {/* About/Skills Section */}
-      <section id="about" className="py-20 px-8 bg-gray-900 text-orange-400">
+      <section id="about" className="py-20 px-8 bg-yellow-400 text-black">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -113,7 +113,7 @@ export default function BrutalistPortfolio() {
             viewport={{ once: true }}
             className="text-6xl font-black uppercase mb-12 text-center"
           >
-            <span className="bg-orange-400 text-black px-4 py-2 inline-block transform -rotate-2">
+            <span className="bg-red-700 text-white px-4 py-2 inline-block transform -rotate-2">
               Skills
             </span>
           </motion.h2>
@@ -126,15 +126,15 @@ export default function BrutalistPortfolio() {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className={`${index === 0 ? 'bg-black' : index === 1 ? 'bg-white' : 'bg-black'} p-6 border-4 border-orange-400 transform rotate-${index % 2 === 0 ? '1' : '-1'}`}
+                className={`${index === 0 ? 'bg-orange-500' : index === 1 ? 'bg-black' : 'bg-orange-500'} p-6 border-4 border-red-700 transform rotate-${index % 2 === 0 ? '1' : '-1'}`}
               >
-                <h3 className="text-2xl font-black uppercase mb-4 flex items-center gap-2 text-orange-400">
+                <h3 className="text-2xl font-black uppercase mb-4 flex items-center gap-2 text-black">
                   <Zap className="w-8 h-8" />
                   {category}
                 </h3>
                 <ul className="space-y-2">
                   {skills.map((skill) => (
-                    <li key={skill} className="font-bold uppercase bg-gray-900 text-orange-400 px-2 py-1 inline-block mr-2 mb-2">
+                    <li key={skill} className="font-bold uppercase bg-red-700 text-white px-2 py-1 inline-block mr-2 mb-2">
                       {skill}
                     </li>
                   ))}
@@ -146,7 +146,7 @@ export default function BrutalistPortfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="work" className="py-20 px-8 bg-black">
+      <section id="work" className="py-20 px-8 bg-orange-500">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -154,7 +154,7 @@ export default function BrutalistPortfolio() {
             viewport={{ once: true }}
             className="text-6xl font-black uppercase mb-12 text-center"
           >
-            <span className="bg-gray-900 text-orange-400 px-4 py-2 inline-block transform rotate-2">
+            <span className="bg-yellow-400 text-black px-4 py-2 inline-block transform rotate-2">
               Projects
             </span>
           </motion.h2>
@@ -167,17 +167,17 @@ export default function BrutalistPortfolio() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="bg-orange-400 border-8 border-black p-8 transform hover:-rotate-1 transition-transform"
+                className="bg-red-700 border-8 border-black p-8 transform hover:-rotate-1 transition-transform"
               >
-                <h3 className="text-3xl font-black uppercase mb-4 bg-gray-900 text-orange-400 px-2 py-1 inline-block">
+                <h3 className="text-3xl font-black uppercase mb-4 bg-red-700_TITLE px-2 py-1 inline-block">
                   {project.title}
                 </h3>
-                <p className="text-xl mb-6 font-bold text-black">{project.description}</p>
+                <p className="text-xl mb-6 font-bold text-white">{project.description}</p>
                 <div className="mb-6">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="inline-block bg-white text-black px-3 py-1 font-bold uppercase mr-2 mb-2 border-2 border-black"
+                      className="inline-block bg-black text-white px-3 py-1 font-bold uppercase mr-2 mb-2 border-2 border-black"
                     >
                       {tech}
                     </span>
@@ -189,7 +189,7 @@ export default function BrutalistPortfolio() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-gray-900 text-orange-400 px-4 py-2 font-bold uppercase border-4 border-black hover:bg-orange-400 hover:text-black transition-colors flex items-center gap-2"
+                      className="bg-yellow-400 text-black px-4 py-2 font-bold uppercase border-4 border-black bg-yellow-400 text-black_HOVER transition-colors flex items-center gap-2"
                     >
                       <Github size={20} />
                       Code
@@ -200,7 +200,7 @@ export default function BrutalistPortfolio() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-gray-900 text-orange-400 px-4 py-2 font-bold uppercase border-4 border-black hover:bg-orange-400 hover:text-black transition-colors flex items-center gap-2"
+                      className="bg-yellow-400 text-black px-4 py-2 font-bold uppercase border-4 border-black bg-yellow-400 text-black_HOVER transition-colors flex items-center gap-2"
                     >
                       <ExternalLink size={20} />
                       Live
@@ -218,7 +218,7 @@ export default function BrutalistPortfolio() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <p className="text-2xl font-black uppercase bg-gray-900 text-orange-400 px-6 py-3 inline-block transform rotate-1">
+            <p className="text-2xl font-black uppercase bg-yellow-400 text-black px-6 py-3 inline-block transform rotate-1">
               + {portfolioData.projects.filter(p => !p.featured).length} More Projects
             </p>
           </motion.div>
@@ -226,7 +226,7 @@ export default function BrutalistPortfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-8 bg-white text-black">
+      <section id="contact" className="py-20 px-8 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, scale: 0.5 }}
@@ -235,7 +235,7 @@ export default function BrutalistPortfolio() {
             transition={{ type: "spring", stiffness: 100 }}
             className="text-6xl font-black uppercase mb-8"
           >
-            <span className="bg-orange-400 text-black px-4 py-2 inline-block transform -rotate-2">
+            <span className="bg-red-700 text-white px-4 py-2 inline-block transform -rotate-2">
               Let's Talk!
             </span>
           </motion.h2>
@@ -243,7 +243,7 @@ export default function BrutalistPortfolio() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-12 bg-gray-900 text-orange-400 px-6 py-3 inline-block"
+            className="text-2xl font-bold mb-12 bg-orange-500 text-black px-6 py-3 inline-block"
           >
             Ready to build something awesome?
           </motion.p>
@@ -255,7 +255,7 @@ export default function BrutalistPortfolio() {
           >
             <a
               href={`mailto:${portfolioData.email}`}
-              className="bg-orange-400 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+              className="bg-red-700 text-white p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
             >
               <Mail size={32} />
             </a>
@@ -263,7 +263,7 @@ export default function BrutalistPortfolio() {
               href={portfolioData.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-400 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+              className="bg-red-700 text-white p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
             >
               <Github size={32} />
             </a>
@@ -271,7 +271,7 @@ export default function BrutalistPortfolio() {
               href={portfolioData.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-400 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+              className="bg-red-700 text-white p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
             >
               <Linkedin size={32} />
             </a>
@@ -279,7 +279,7 @@ export default function BrutalistPortfolio() {
               href={portfolioData.social.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-400 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+              className="bg-red-700 text-white p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
             >
               <Twitter size={32} />
             </a>
