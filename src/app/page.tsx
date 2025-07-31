@@ -31,7 +31,7 @@ export default function BrutalistPortfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-8 pt-20 relative">
+      <section className="min-h-screen flex items-center justify-center px-8 pt-20 pb-20 relative">
         <div className="absolute inset-0">
           <motion.div
             animate={{

@@ -15,6 +15,14 @@ export const portfolioData = {
   
   projects: [
     {
+      title: "Improv App",
+      description: "Interactive web application for improv comedy performers and enthusiasts",
+      tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+      github: "https://github.com/warnerjoe/improv-app",
+      live: "https://improv-app-omega.vercel.app/",
+      featured: true
+    },
+    {
       title: "WrestleGPT",
       description: "Web app that simulates wrestling matches using ChatGPT and OpenAI API",
       tech: ["JavaScript", "Node.js", "Express", "MongoDB", "Bootstrap", "OpenAI API"],
