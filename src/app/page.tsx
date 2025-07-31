@@ -275,14 +275,6 @@ export default function BrutalistPortfolio() {
             >
               <Linkedin size={32} />
             </a>
-            <a
-              href={portfolioData.social.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-yellow-300 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
-            >
-              <Twitter size={32} />
-            </a>
           </motion.div>
         </div>
       </section>
