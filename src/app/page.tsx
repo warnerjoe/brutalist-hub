@@ -1,217 +1,291 @@
 'use client'
 
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { 
-  Sparkles, 
-  Terminal, 
-  Layers, 
-  Grid3x3, 
-  Zap, 
-  BookOpen, 
-  Palette,
-  Code2
-} from 'lucide-react'
+import { Github, Linkedin, Twitter, Mail, ExternalLink, ArrowRight, Zap } from 'lucide-react'
+import { portfolioData } from '@/lib/portfolio-data'
 
-const portfolios = [
-  {
-    id: 'brutalist',
-    title: 'Original Yellow',
-    description: 'Classic brutalist design with yellow background and black text',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-yellow-400 to-yellow-500',
-    href: '/portfolios/brutalist'
-  },
-  {
-    id: 'minimalist',
-    title: 'Classic Red/Black',
-    description: 'Red background with bold black text and yellow accents',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-red-500 to-red-600',
-    href: '/portfolios/minimalist'
-  },
-  {
-    id: 'creative-agency',
-    title: 'Neon Cyber',
-    description: 'Black background with cyan and pink neon highlights',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-black to-gray-900',
-    href: '/portfolios/creative-agency'
-  },
-  {
-    id: 'data-dashboard',
-    title: 'Industrial Orange',
-    description: 'Orange industrial theme with dark navigation and clean contrasts',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-orange-400 to-orange-500',
-    href: '/portfolios/data-dashboard'
-  },
-  {
-    id: 'terminal',
-    title: 'Electric Blue',
-    description: 'Bright blue background with white navigation and yellow accents',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-blue-500 to-blue-600',
-    href: '/portfolios/terminal'
-  },
-  {
-    id: 'interactive-3d',
-    title: 'Forest Brutalist',
-    description: 'Deep green background with red and yellow geometric shapes',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-green-600 to-green-700',
-    href: '/portfolios/interactive-3d'
-  },
-  {
-    id: 'timeline',
-    title: 'Purple Rage',
-    description: 'Purple background with yellow navigation and pink accents',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-purple-600 to-purple-700',
-    href: '/portfolios/timeline'
-  },
-  {
-    id: 'card-based',
-    title: 'Sunset Brutal',
-    description: 'Deep red sunset theme with yellow and purple shapes',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-red-600 to-red-700',
-    href: '/portfolios/card-based'
-  },
-  {
-    id: 'magazine',
-    title: 'Monochrome',
-    description: 'Classic black and white with strategic red accent colors',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-black to-gray-800',
-    href: '/portfolios/magazine'
-  },
-  {
-    id: 'glassmorphism',
-    title: 'Miami Vice',
-    description: 'Pink background with cyan navigation and vibrant highlights',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-pink-500 to-pink-600',
-    href: '/portfolios/glassmorphism'
-  },
-  {
-    id: 'corporate',
-    title: 'Acid Green',
-    description: 'Lime green background with purple navigation and bold contrasts',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-lime-400 to-lime-500',
-    href: '/portfolios/corporate'
-  },
-  {
-    id: 'gradient-modern',
-    title: 'Deep Sea',
-    description: 'Teal background with orange navigation and cyan accents',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-teal-600 to-teal-700',
-    href: '/portfolios/gradient-modern'
-  },
-  {
-    id: 'fire-engine',
-    title: 'Fire Engine',
-    description: 'Dark red background with yellow navigation and orange shapes',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-red-700 to-red-800',
-    href: '/portfolios/fire-engine'
-  },
-  {
-    id: 'retro-wave',
-    title: 'Retro Wave',
-    description: 'Indigo background with pink navigation and cyan highlights',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-indigo-600 to-indigo-700',
-    href: '/portfolios/retro-wave'
-  },
-  {
-    id: 'earth-tone',
-    title: 'Earth Tone',
-    description: 'Amber background with green navigation and brown accents',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-amber-600 to-amber-700',
-    href: '/portfolios/earth-tone'
-  },
-  {
-    id: 'arctic',
-    title: 'Arctic',
-    description: 'Dark slate background with blue navigation and cyan highlights',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-slate-800 to-slate-900',
-    href: '/portfolios/arctic'
-  }
-]
-
-export default function Home() {
+export default function BrutalistPortfolio() {
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-900 p-8">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Brutalist Color Schemes
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Choose from 16 bold color variations of the same brutalist design. Each scheme maintains 
-            the exact same layout and animations but with unique color personalities - from professional 
-            to vibrant to experimental.
-          </p>
-        </motion.div>
+    <div className="min-h-screen bg-yellow-300 text-black overflow-hidden">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-black text-yellow-300 z-50 border-b-4 border-black">
+        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+          <motion.h2
+            initial={{ rotateZ: -5 }}
+            animate={{ rotateZ: 0 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="font-black text-2xl uppercase"
+          >
+            {portfolioData.firstName}!
+          </motion.h2>
+          <motion.div
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            className="flex gap-6 font-bold uppercase text-sm"
+          >
+            <a href="#about" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">About</a>
+            <a href="#work" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">Work</a>
+            <a href="#contact" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">Contact</a>
+          </motion.div>
+        </div>
+      </nav>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {portfolios.map((portfolio, index) => (
-            <motion.div
-              key={portfolio.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-            >
-              <Link href={portfolio.href}>
-                <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${portfolio.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                  
-                  <div className="p-6">
-                    <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${portfolio.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      {portfolio.icon}
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-                      {portfolio.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                      {portfolio.description}
-                    </p>
-                  </div>
-                  
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
-                       style={{ background: `linear-gradient(to right, ${portfolio.color.split(' ')[1]}, ${portfolio.color.split(' ')[3]})` }} />
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center px-8 pt-20 relative">
+        <div className="absolute inset-0">
+          <motion.div
+            animate={{
+              rotate: [0, 5, -5, 0],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-500 -rotate-12"
+          />
+          <motion.div
+            animate={{
+              rotate: [0, -5, 5, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500 rotate-45"
+          />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-gray-600 dark:text-gray-400">
-            Built with Next.js, TypeScript, and Tailwind CSS
-          </p>
-          <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
-            Each portfolio demonstrates different design patterns and technologies
-          </p>
-        </motion.div>
-      </div>
-    </main>
+        <div className="relative z-10 max-w-5xl mx-auto">
+          <motion.div
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 100 }}
+            className="mb-8"
+          >
+            <h1 className="text-7xl md:text-9xl font-black uppercase leading-none">
+              <span className="block bg-black text-yellow-300 px-4 py-2 inline-block transform -rotate-2">
+                {portfolioData.name.split(' ')[0]}
+              </span>
+              <span className="block bg-red-500 text-white px-4 py-2 inline-block transform rotate-2 mt-4">
+                {portfolioData.name.split(' ')[1]}
+              </span>
+            </h1>
+          </motion.div>
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="bg-black text-yellow-300 p-6 border-4 border-black transform -rotate-1"
+          >
+            <p className="text-2xl font-black uppercase mb-2">{portfolioData.title}</p>
+            <p className="text-lg">{portfolioData.bio}</p>
+          </motion.div>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="mt-8 flex gap-4"
+          >
+            <a
+              href="#work"
+              className="bg-red-500 text-white px-8 py-4 font-black uppercase border-4 border-black hover:transform hover:translate-x-1 hover:translate-y-1 transition-transform flex items-center gap-2"
+            >
+              See Work <ArrowRight />
+            </a>
+            <a
+              href="#contact"
+              className="bg-blue-500 text-white px-8 py-4 font-black uppercase border-4 border-black hover:transform hover:translate-x-1 hover:translate-y-1 transition-transform"
+            >
+              Hire Me!
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About/Skills Section */}
+      <section id="about" className="py-20 px-8 bg-black text-yellow-300">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-6xl font-black uppercase mb-12 text-center"
+          >
+            <span className="bg-yellow-300 text-black px-4 py-2 inline-block transform -rotate-2">
+              Skills
+            </span>
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {Object.entries(portfolioData.skills).map(([category, skills], index) => (
+              <motion.div
+                key={category}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className={`bg-${index === 0 ? 'red' : index === 1 ? 'blue' : 'green'}-500 p-6 border-4 border-yellow-300 transform rotate-${index % 2 === 0 ? '1' : '-1'}`}
+              >
+                <h3 className="text-2xl font-black uppercase mb-4 flex items-center gap-2">
+                  <Zap className="w-8 h-8" />
+                  {category}
+                </h3>
+                <ul className="space-y-2">
+                  {skills.map((skill) => (
+                    <li key={skill} className="font-bold uppercase bg-black text-yellow-300 px-2 py-1 inline-block mr-2 mb-2">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="work" className="py-20 px-8 bg-red-500">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-6xl font-black uppercase mb-12 text-center"
+          >
+            <span className="bg-black text-yellow-300 px-4 py-2 inline-block transform rotate-2">
+              Projects
+            </span>
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {portfolioData.projects.filter(p => p.featured).map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-yellow-300 border-8 border-black p-8 transform hover:-rotate-1 transition-transform"
+              >
+                <h3 className="text-3xl font-black uppercase mb-4 bg-black text-yellow-300 px-2 py-1 inline-block">
+                  {project.title}
+                </h3>
+                <p className="text-xl mb-6 font-bold">{project.description}</p>
+                <div className="mb-6">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="inline-block bg-blue-500 text-white px-3 py-1 font-bold uppercase mr-2 mb-2 border-2 border-black"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-4">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-black text-yellow-300 px-4 py-2 font-bold uppercase border-4 border-black hover:bg-yellow-300 hover:text-black transition-colors flex items-center gap-2"
+                    >
+                      <Github size={20} />
+                      Code
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-black text-yellow-300 px-4 py-2 font-bold uppercase border-4 border-black hover:bg-yellow-300 hover:text-black transition-colors flex items-center gap-2"
+                    >
+                      <ExternalLink size={20} />
+                      Live
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* All Projects Link */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-2xl font-black uppercase bg-black text-yellow-300 px-6 py-3 inline-block transform rotate-1">
+              + {portfolioData.projects.filter(p => !p.featured).length} More Projects
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-8 bg-blue-500 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 100 }}
+            className="text-6xl font-black uppercase mb-8"
+          >
+            <span className="bg-yellow-300 text-black px-4 py-2 inline-block transform -rotate-2">
+              Let's Talk!
+            </span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-2xl font-bold mb-12 bg-black px-6 py-3 inline-block"
+          >
+            Ready to build something awesome?
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex justify-center gap-4 flex-wrap"
+          >
+            <a
+              href={`mailto:${portfolioData.email}`}
+              className="bg-yellow-300 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+            >
+              <Mail size={32} />
+            </a>
+            <a
+              href={portfolioData.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-300 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+            >
+              <Github size={32} />
+            </a>
+            <a
+              href={portfolioData.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-300 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+            >
+              <Linkedin size={32} />
+            </a>
+            <a
+              href={portfolioData.social.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-300 text-black p-4 border-4 border-black hover:transform hover:rotate-6 transition-transform"
+            >
+              <Twitter size={32} />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   )
 }
