@@ -34,7 +34,7 @@ export const portfolioData = {
       title: "Sentomment",
       description: "Sentiment analysis tool for analyzing online comments and social media",
       tech: ["React", "Node.js", "NLP", "Express"],
-      github: "https://github.com/warnerjoe/sentomment",
+      github: "https://github.com/warnerjoe/sentiment-check",
       live: null,
       featured: true
     },
