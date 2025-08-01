@@ -1,14 +1,33 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Github, Linkedin, Twitter, Mail, ExternalLink, ArrowRight, Zap } from 'lucide-react'
 import { portfolioData } from '@/lib/portfolio-data'
+import { useEffect, useState } from 'react'
 
 export default function BrutalistPortfolio() {
+  const [showNav, setShowNav] = useState(false)
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = window.innerHeight
+      const scrollPosition = window.scrollY
+      setShowNav(scrollPosition > heroHeight - 100)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+  
   return (
     <div className="min-h-screen bg-yellow-300 text-black overflow-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black text-yellow-300 z-50 border-b-4 border-black">
+      <motion.nav 
+        initial={{ y: -100 }}
+        animate={{ y: showNav ? 0 : -100 }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        className="fixed top-0 w-full bg-black text-yellow-300 z-50 border-b-4 border-black"
+      >
         <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
           <motion.h2
             initial={{ rotateZ: -5 }}
@@ -28,10 +47,10 @@ export default function BrutalistPortfolio() {
             <a href="#contact" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">Contact</a>
           </motion.div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-8 pt-20 pb-20 relative">
+      <section className="min-h-screen flex items-center justify-center px-8 pb-20 relative">
         <div className="absolute inset-0">
           <motion.div
             animate={{
