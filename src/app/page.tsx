@@ -119,28 +119,34 @@ export default function BrutalistPortfolio() {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Object.entries(portfolioData.skills).map(([category, skills], index) => (
-              <motion.div
-                key={category}
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className={`bg-${index === 0 ? 'red' : index === 1 ? 'blue' : 'green'}-500 p-6 border-4 border-yellow-300 transform rotate-${index % 2 === 0 ? '1' : '-1'}`}
-              >
-                <h3 className="text-2xl font-black uppercase mb-4 flex items-center gap-2">
-                  <Zap className="w-8 h-8" />
-                  {category}
-                </h3>
-                <ul className="space-y-2">
-                  {skills.map((skill) => (
-                    <li key={skill} className="font-bold uppercase bg-black text-yellow-300 px-2 py-1 inline-block mr-2 mb-2">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+            {Object.entries(portfolioData.skills).map(([category, skills], index) => {
+              const bgColor = category.toLowerCase() === 'languages' ? 'bg-green-500' : 
+                            category.toLowerCase() === 'tools' ? 'bg-red-500' : 'bg-blue-500';
+              const rotation = index % 2 === 0 ? 'rotate-1' : '-rotate-1';
+              
+              return (
+                <motion.div
+                  key={category}
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                  className={`${bgColor} p-6 border-4 border-yellow-300 transform ${rotation}`}
+                >
+                  <h3 className="text-2xl font-black uppercase mb-4 flex items-center gap-2">
+                    <Zap className="w-8 h-8" />
+                    {category}
+                  </h3>
+                  <ul className="space-y-2">
+                    {skills.map((skill) => (
+                      <li key={skill} className="font-bold uppercase bg-black text-yellow-300 px-2 py-1 inline-block mr-2 mb-2">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
