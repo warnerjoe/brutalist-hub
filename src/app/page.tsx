@@ -121,7 +121,9 @@ export default function BrutalistPortfolio() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(portfolioData.skills).map(([category, skills], index) => {
               const bgColor = category.toLowerCase() === 'languages' ? 'bg-green-500' : 
-                            category.toLowerCase() === 'tools' ? 'bg-red-500' : 'bg-blue-500';
+                            category.toLowerCase() === 'frontend' ? 'bg-blue-500' :
+                            category.toLowerCase() === 'backend' ? 'bg-green-500' :
+                            'bg-red-500'; // tools
               const rotation = index % 2 === 0 ? 'rotate-1' : '-rotate-1';
               
               return (
