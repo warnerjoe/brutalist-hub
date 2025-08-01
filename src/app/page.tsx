@@ -227,7 +227,7 @@ export default function BrutalistPortfolio() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-black text-yellow-300 px-4 py-2 font-bold uppercase border-4 border-black hover:bg-yellow-300 hover:text-black transition-colors flex items-center gap-2"
+                      className="bg-green-500 text-white px-4 py-2 font-bold uppercase border-4 border-black hover:bg-green-600 transition-colors flex items-center gap-2"
                     >
                       <ExternalLink size={20} />
                       Live
