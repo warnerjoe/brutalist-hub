@@ -226,9 +226,14 @@ export default function BrutalistPortfolio() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <p className="text-2xl font-black uppercase bg-black text-yellow-300 px-6 py-3 inline-block transform rotate-1">
-              + {portfolioData.projects.filter(p => !p.featured).length} More Projects
-            </p>
+            <a
+              href={portfolioData.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl font-black uppercase bg-black text-yellow-300 px-6 py-3 inline-block transform rotate-1 hover:bg-yellow-300 hover:text-black transition-colors border-4 border-black"
+            >
+              + More Projects
+            </a>
           </motion.div>
         </div>
       </section>
