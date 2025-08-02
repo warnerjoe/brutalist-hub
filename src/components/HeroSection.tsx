@@ -43,7 +43,7 @@ export default function HeroSection() {
             <span className="block bg-black text-yellow-300 px-4 py-2 inline-block transform -rotate-2">
               {portfolioData.name.split(' ')[0]}
             </span>
-            <span className="block bg-red-500 text-white px-4 py-2 inline-block transform rotate-2 mt-4 border-4 border-black">
+            <span className="block bg-red-500 text-white px-4 py-2 inline-block transform rotate-2 mt-4 border-4 border-yellow-300">
               {portfolioData.name.split(' ')[1]}
             </span>
           </h1>
