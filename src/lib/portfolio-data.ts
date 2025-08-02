@@ -17,7 +17,7 @@ export const portfolioData = {
     {
       title: "Improv App",
       description: "Interactive web application for improv comedy performers and enthusiasts",
-      tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostCSS", "Vercel"],
       github: "https://github.com/warnerjoe/improv-app",
       live: "https://improv-app-omega.vercel.app/",
       featured: true
@@ -25,7 +25,7 @@ export const portfolioData = {
     {
       title: "WrestleGPT",
       description: "Web app that simulates wrestling matches using ChatGPT and OpenAI API",
-      tech: ["JavaScript", "Node.js", "Express", "MongoDB", "Bootstrap", "OpenAI API"],
+      tech: ["JavaScript", "Node.js", "Express", "EJS", "Bootstrap", "Passport.js", "Axios", "OpenAI API"],
       github: "https://github.com/warnerjoe/wrestlegpt",
       live: "https://meltzergpt-production.up.railway.app/",
       featured: true
@@ -33,15 +33,15 @@ export const portfolioData = {
     {
       title: "Sentomment",
       description: "Sentiment analysis tool for analyzing online comments and social media",
-      tech: ["React", "Node.js", "NLP", "Express"],
-      github: "https://github.com/warnerjoe/sentiment-check",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Python", "TextBlob", "Docker", "Kubernetes"],
+      github: "https://github.com/warnerjoe/sentomment",
       live: "https://web-production-e4f5.up.railway.app/",
       featured: true
     },
     {
       title: "RDDB",
       description: "Card game database with pagination, filtering, and sorting functionality",
-      tech: ["React", "Node.js", "Mongoose", "Express", "Tailwind CSS"],
+      tech: ["Next.js", "JavaScript", "MongoDB", "Express", "EJS", "Vercel"],
       github: "https://github.com/warnerjoe/rddb-3",
       live: "https://rddb-3.vercel.app/",
       featured: true
