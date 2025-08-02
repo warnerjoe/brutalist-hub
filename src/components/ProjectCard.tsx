@@ -7,8 +7,8 @@ interface Project {
   title: string
   description: string
   tech: string[]
-  github?: string
-  live?: string
+  github?: string | null
+  live?: string | null
   featured: boolean
 }
 
