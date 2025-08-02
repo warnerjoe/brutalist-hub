@@ -143,7 +143,8 @@ export default function BrutalistPortfolio() {
                             category.toLowerCase() === 'frontend' ? 'bg-blue-500' :
                             category.toLowerCase() === 'backend' ? 'bg-green-500' :
                             'bg-red-500'; // tools
-              const rotation = index % 2 === 0 ? 'rotate-1' : '-rotate-1';
+              const rotations = ['rotate-2', '-rotate-3', 'rotate-1', '-rotate-2'];
+              const rotation = rotations[index];
               
               return (
                 <motion.div
