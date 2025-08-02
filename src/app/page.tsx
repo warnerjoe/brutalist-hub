@@ -212,17 +212,6 @@ export default function BrutalistPortfolio() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-green-500 text-white px-4 py-2 font-bold uppercase border-4 border-black hover:bg-green-600 transition-colors flex items-center gap-2"
-                    >
-                      <ExternalLink size={20} />
-                      Live
-                    </a>
-                  )}
                   {project.github && (
                     <a
                       href={project.github}
@@ -232,6 +221,17 @@ export default function BrutalistPortfolio() {
                     >
                       <Github size={20} />
                       Code
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-green-500 text-white px-4 py-2 font-bold uppercase border-4 border-black hover:bg-green-600 transition-colors flex items-center gap-2"
+                    >
+                      <ExternalLink size={20} />
+                      Live
                     </a>
                   )}
                 </div>
