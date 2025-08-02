@@ -40,10 +40,10 @@ export const portfolioData = {
     },
     {
       title: "RDDB",
-      description: "Full-stack application built with React and Node.js featuring database management",
+      description: "Card game database with pagination, filtering, and sorting functionality",
       tech: ["React", "Node.js", "Mongoose", "Express", "Tailwind CSS"],
       github: "https://github.com/warnerjoe/rddb",
-      live: null,
+      live: "https://rddb-3.vercel.app/",
       featured: true
     },
     {
