@@ -137,7 +137,7 @@ export default function BrutalistPortfolio() {
             </span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {Object.entries(portfolioData.skills).map(([category, skills], index) => {
               const bgColor = category.toLowerCase() === 'languages' ? 'bg-green-500' : 
                             category.toLowerCase() === 'frontend' ? 'bg-blue-500' :

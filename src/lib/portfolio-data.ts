@@ -8,9 +8,9 @@ export const portfolioData = {
   
   skills: {
     languages: ["JavaScript", "TypeScript", "Python", "HTML", "CSS"],
+    tools: ["Git", "VS Code", "Docker", "Kubernetes", "AWS", "Vercel", "Railway", "Claude", "Jest", "OpenAI API"],
     frontend: ["React", "Next.js", "Vite", "Tailwind CSS", "Bootstrap", "EJS", "PostCSS", "Framer Motion"],
-    backend: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT Auth", "Passport.js", "Axios", "TextBlob"],
-    tools: ["Git", "VS Code", "Docker", "Kubernetes", "AWS", "Vercel", "Railway", "Claude", "Jest", "OpenAI API"]
+    backend: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT Auth", "Passport.js", "Axios", "TextBlob"]
   },
   
   projects: [
