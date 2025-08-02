@@ -27,7 +27,7 @@ export const portfolioData = {
       description: "Web app that simulates wrestling matches using ChatGPT and OpenAI API",
       tech: ["JavaScript", "Node.js", "Express", "MongoDB", "Bootstrap", "OpenAI API"],
       github: "https://github.com/warnerjoe/wrestlegpt",
-      live: null,
+      live: "https://meltzergpt-production.up.railway.app/",
       featured: true
     },
     {
