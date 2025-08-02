@@ -35,7 +35,7 @@ export const portfolioData = {
       description: "Sentiment analysis tool for analyzing online comments and social media",
       tech: ["React", "Node.js", "NLP", "Express"],
       github: "https://github.com/warnerjoe/sentiment-check",
-      live: null,
+      live: "https://web-production-e4f5.up.railway.app/",
       featured: true
     },
     {
