@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Github, ExternalLink } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 interface Project {
@@ -23,6 +23,20 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window)
+    }
+    
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+    return () => window.removeEventListener('resize', checkIsMobile)
+  }, [])
+
+  // On mobile, show GIF by default; on desktop, show GIF on hover
+  const shouldShowGif = isMobile || isHovered
 
   return (
     <motion.div
@@ -37,12 +51,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {project.image && (
         <div className="mb-6 overflow-hidden border-4 border-black">
           <Image
-            src={isHovered && project.imageGif ? project.imageGif : project.image}
+            src={shouldShowGif && project.imageGif ? project.imageGif : project.image}
             alt={`${project.title} preview`}
             width={450}
             height={219}
             className="w-full h-auto object-cover transition-all duration-300"
-            unoptimized={isHovered && project.imageGif ? true : false}
+            unoptimized={shouldShowGif && project.imageGif ? true : false}
           />
         </div>
       )}
