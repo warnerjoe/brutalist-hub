@@ -35,7 +35,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
 
-  // On mobile, show GIF by default; on desktop, show GIF on hover
+  // On mobile, show GIF by default; on desktop, show GIF only while hovering
   const shouldShowGif = isMobile || isHovered
 
   return (
