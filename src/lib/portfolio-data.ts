@@ -20,7 +20,9 @@ export const portfolioData = {
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostCSS", "Vercel"],
       github: "https://github.com/warnerjoe/improv-app",
       live: "https://improv-app-omega.vercel.app/",
-      featured: true
+      featured: true,
+      image: "/images/improv-static.png",
+      imageGif: "/images/improv-demo.gif"
     },
     {
       title: "WrestleGPT",
@@ -28,7 +30,9 @@ export const portfolioData = {
       tech: ["JavaScript", "Node.js", "Express", "EJS", "Bootstrap", "Passport.js", "Axios", "OpenAI API"],
       github: "https://github.com/warnerjoe/wrestlegpt",
       live: "https://meltzergpt-production.up.railway.app/",
-      featured: true
+      featured: true,
+      image: "/images/wrestlegpt.png",
+      imageGif: "/images/wrestlegpt.gif"
     },
     {
       title: "Sentomment",

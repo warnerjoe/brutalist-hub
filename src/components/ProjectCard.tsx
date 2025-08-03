@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { Github, ExternalLink } from 'lucide-react'
+import { useState } from 'react'
+import Image from 'next/image'
 
 interface Project {
   title: string
@@ -10,6 +12,8 @@ interface Project {
   github?: string | null
   live?: string | null
   featured: boolean
+  image?: string
+  imageGif?: string
 }
 
 interface ProjectCardProps {
@@ -18,6 +22,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
@@ -25,7 +31,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.2 }}
       className="bg-yellow-300 border-8 border-black p-8 transform hover:-rotate-1 transition-transform"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
+      {project.image && (
+        <div className="mb-6 overflow-hidden border-4 border-black">
+          <Image
+            src={isHovered && project.imageGif ? project.imageGif : project.image}
+            alt={`${project.title} preview`}
+            width={450}
+            height={219}
+            className="w-full h-auto object-cover transition-all duration-300"
+            unoptimized={isHovered && project.imageGif ? true : false}
+          />
+        </div>
+      )}
       <h3 className="text-3xl font-black uppercase mb-4 bg-black text-yellow-300 px-2 py-1 inline-block">
         {project.title}
       </h3>
