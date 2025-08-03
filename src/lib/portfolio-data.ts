@@ -15,7 +15,7 @@ export const portfolioData = {
   
   projects: [
     {
-      title: "Improv App",
+      title: "Improviser's Toolkit",
       description: "Interactive web application for improv comedy performers and enthusiasts",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostCSS", "Vercel"],
       github: "https://github.com/warnerjoe/improv-app",
