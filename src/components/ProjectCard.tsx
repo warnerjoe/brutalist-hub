@@ -48,18 +48,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {project.image && (
-        <div className="mb-6 overflow-hidden border-4 border-black">
-          <Image
-            src={shouldShowGif && project.imageGif ? project.imageGif : project.image}
-            alt={`${project.title} preview`}
-            width={450}
-            height={219}
-            className="w-full h-auto object-cover transition-all duration-300"
-            unoptimized={shouldShowGif && project.imageGif ? true : false}
-          />
-        </div>
-      )}
       <h3 className="text-3xl font-black uppercase mb-4 bg-black text-yellow-300 px-2 py-1 inline-block">
         {project.title}
       </h3>
@@ -74,6 +62,18 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </span>
         ))}
       </div>
+      {project.image && (
+        <div className="mb-6 overflow-hidden border-4 border-black">
+          <Image
+            src={shouldShowGif && project.imageGif ? project.imageGif : project.image}
+            alt={`${project.title} preview`}
+            width={450}
+            height={219}
+            className="w-full h-auto object-cover transition-all duration-300"
+            unoptimized={shouldShowGif && project.imageGif ? true : false}
+          />
+        </div>
+      )}
       <div className="flex gap-4">
         {project.github && (
           <a
