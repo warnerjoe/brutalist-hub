@@ -21,8 +21,8 @@ export const portfolioData = {
       github: "https://github.com/warnerjoe/improv-app",
       live: "https://improv-app-omega.vercel.app/",
       featured: true,
-      image: "/images/improv-static.png",
-      imageGif: "/images/improv-demo.gif"
+      image: "/images/improv.png",
+      imageGif: "/images/improv.gif"
     },
     {
       title: "WrestleGPT",
@@ -40,7 +40,9 @@ export const portfolioData = {
       tech: ["React", "Node.js", "Express", "MongoDB", "Python", "TextBlob", "Docker", "Kubernetes"],
       github: "https://github.com/warnerjoe/sentomment",
       live: "https://web-production-e4f5.up.railway.app/",
-      featured: true
+      featured: true,
+      image: "/images/sentomment.png",
+      imageGif: "/images/sentomment.gif"
     },
     {
       title: "RDDB",
@@ -48,7 +50,9 @@ export const portfolioData = {
       tech: ["Next.js", "JavaScript", "MongoDB", "Express", "EJS", "Vercel"],
       github: "https://github.com/warnerjoe/rddb-3",
       live: "https://rddb-3.vercel.app/",
-      featured: true
+      featured: true,
+      image: "/images/rddb.png",
+      imageGif: "/images/rddb.gif"
     },
     {
       title: "Error Tracker Spreadsheet",
