@@ -7,18 +7,57 @@ import { portfolioData } from '@/lib/portfolio-data'
 export default function ContactSection() {
   return (
     <section id="contact" className="py-20 px-8 bg-blue-500 text-white">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto">
+        {/* Testimonials */}
         <motion.h2
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100 }}
-          className="text-6xl font-black uppercase mb-8"
+          className="text-6xl font-black uppercase mb-12 text-center"
         >
-          <span className="bg-yellow-300 text-black px-4 py-2 inline-block transform -rotate-2">
-            Let's Talk!
+          <span className="bg-yellow-300 text-black px-4 py-2 inline-block transform rotate-1">
+            What People Say
           </span>
         </motion.h2>
+
+        <div className="flex justify-center mb-20">
+          {portfolioData.testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.name}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="bg-yellow-300 text-black p-8 border-4 border-black transform hover:rotate-1 transition-transform max-w-4xl w-full"
+            >
+              <p className="text-xl font-bold mb-6 italic text-center">"{testimonial.content}"</p>
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-16 h-16 bg-black text-yellow-300 rounded-full flex items-center justify-center font-black text-2xl">
+                  {testimonial.name.charAt(0)}
+                </div>
+                <div className="text-center">
+                  <p className="font-black text-xl">{testimonial.name}</p>
+                  <p className="text-lg font-bold">{testimonial.role}</p>
+                  {testimonial.company && <p className="text-base">{testimonial.company}</p>}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Contact CTA */}
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 100 }}
+            className="text-6xl font-black uppercase mb-8"
+          >
+            <span className="bg-yellow-300 text-black px-4 py-2 inline-block transform -rotate-2">
+              Let's Talk!
+            </span>
+          </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -56,6 +95,7 @@ export default function ContactSection() {
             <Linkedin size={32} />
           </a>
         </motion.div>
+        </div>
       </div>
     </section>
   )

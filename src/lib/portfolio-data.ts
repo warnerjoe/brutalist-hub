@@ -4,7 +4,7 @@ export const portfolioData = {
   title: "Full Stack Software Engineer",
   location: "Milwaukee, WI",
   email: "warnerjoe337@icloud.com",
-  bio: "Self-taught web developer with a passion for building dynamic, responsive web applications. When I'm not coding, you can find me performing improv comedy or gaming.",
+  bio: "Web developer with a passion for building dynamic, responsive web applications. When I'm not coding, you can find me performing improv comedy or gaming. Currently focused on back end architecture and AI integrations.",
   
   skills: {
     languages: ["JavaScript", "TypeScript", "Python", "HTML", "CSS"],
@@ -96,6 +96,16 @@ export const portfolioData = {
       period: "2018 - Present",
       description: "Started with HTML/CSS in Notepad, continuously learning through projects and online courses"
     }
+  ],
+  
+  testimonials: [
+    {
+      name: "William Smith",
+      role: "Freelance Client",
+      company: null,
+      content: "From the very beginning, it was clear that Joe not only had exceptional technical skills and a passion for web development but also the ability to communicate the process to me as a client in an approachable and understandable way. In addition to being a highly skilled full-stack developer, Joe has been a dedicated mentor to me and a natural problem solver. He would be an invaluable asset to any team or project, and I highly recommend him without hesitation for any role he pursues.",
+      avatar: null,
+    },
   ],
   
   social: {
