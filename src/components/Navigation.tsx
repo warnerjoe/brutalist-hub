@@ -31,7 +31,7 @@ export default function Navigation({ showNav }: NavigationProps) {
         >
           <a href="#about" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">About</a>
           <a href="#work" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">Work</a>
-          <a href="#contact" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">Contact</a>
+          <a href="#lets-talk" className="hover:bg-yellow-300 hover:text-black px-2 py-1 transition-colors">Contact</a>
         </motion.div>
       </div>
     </motion.nav>

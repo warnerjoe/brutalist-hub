@@ -70,7 +70,7 @@ export default function HeroSection() {
             See Work <ArrowRight />
           </a>
           <a
-            href="#contact"
+            href="#lets-talk"
             className="bg-blue-500 text-white px-8 py-4 font-black uppercase border-4 border-black hover:transform hover:translate-x-1 hover:translate-y-1 transition-transform"
           >
             Hire Me!

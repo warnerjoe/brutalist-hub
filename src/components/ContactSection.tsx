@@ -46,7 +46,7 @@ export default function ContactSection() {
         </div>
 
         {/* Contact CTA */}
-        <div className="max-w-4xl mx-auto text-center">
+        <div id="lets-talk" className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
