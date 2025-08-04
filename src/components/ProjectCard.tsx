@@ -44,7 +44,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.2 }}
-      className="bg-yellow-300 border-8 border-black p-8 transform hover:-rotate-1 transition-transform"
+      className="bg-yellow-300 border-8 border-black p-8 transform hover:-rotate-1 transition-transform flex flex-col h-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -62,19 +62,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </span>
         ))}
       </div>
-      {project.image && (
-        <div className="mb-6 overflow-hidden border-4 border-black">
-          <Image
-            src={shouldShowGif && project.imageGif ? project.imageGif : project.image}
-            alt={`${project.title} preview`}
-            width={450}
-            height={219}
-            className="w-full h-auto object-cover transition-all duration-300"
-            unoptimized={shouldShowGif && project.imageGif ? true : false}
-          />
-        </div>
-      )}
-      <div className="flex gap-4">
+      <div className="flex-grow"></div>
+      <div className="mt-auto">
+        {project.image && (
+          <div className="mb-6 overflow-hidden border-4 border-black">
+            <Image
+              src={shouldShowGif && project.imageGif ? project.imageGif : project.image}
+              alt={`${project.title} preview`}
+              width={450}
+              height={219}
+              className="w-full h-auto object-cover transition-all duration-300"
+              unoptimized={shouldShowGif && project.imageGif ? true : false}
+            />
+          </div>
+        )}
+        <div className="flex gap-4">
         {project.github && (
           <a
             href={project.github}
@@ -97,6 +99,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             Live
           </a>
         )}
+        </div>
       </div>
     </motion.div>
   )
